@@ -8,7 +8,7 @@ from models.state import State
 
 
 @app_views.route('/states/<state_id>/cities', methods=['GET'],
-                strict_slashes=False)
+                 strict_slashes=False)
 def get_cities_by_state_id(state_id):
     """Doc for get_cities_by_state_id"""
     state = storage.get(State, state_id)
