@@ -68,7 +68,7 @@ class FileStorage:
     def get(self, cls, id):
         """retrieve one object"""
         if cls is not None and id is not None:
-            if cls is str:
+            if type(cls) is str:
                 key = cls + '.' + id
             else:
                 key = cls.__name__ + '.' + id
