@@ -4,6 +4,7 @@ from flask import Flask
 from models import storage
 from api.v1.views import app_views
 from os import getenv
+from flask_cors import CORS
 app = Flask(__name__)
 app.register_blueprint(app_views)
 
@@ -12,6 +13,9 @@ app.register_blueprint(app_views)
 def custom_not_found(error):
     '''Doc for 404'''
     return {"error": "Not found"}, 404
+
+
+CORS(app, resources={r"/api/v1/*": {"origins": "0.0.0.0"}})
 
 
 @app.teardown_appcontext
