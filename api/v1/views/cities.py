@@ -1,4 +1,4 @@
-#!/usr/bin/python3 
+#!/usr/bin/python3
 '''Doc for cities'''
 from flask import request, jsonify
 from api.v1.views import app_views
