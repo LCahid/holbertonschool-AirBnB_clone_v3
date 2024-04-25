@@ -1,0 +1,38 @@
+username : LCahid
+
+Cahid : Salam Revan bugun hbnbbya gelessen?
+Ravan : Beli indi yoldayam
+after 3 hours later
+Cahid : OOO menim peeerim
+Ravan : Salam
+Cahid : Gel baxaq koda
+Ravan : Okey
+Abil : Hara gedirsen? PLD taski var form da error aliriq
+Cavid : Ravan burda dyan Yasar da gelsin portfolio baxaq
+Cahid : Biz proyekte baxiriq indi qalsin soraya
+Cavid : Sora baxarsizda biz tapanmiyacayq
+after 2 hours later
+Cahid : Bitirdik axir ki
+Ravan : Code review qalib
+Cahid : BRUHHHHH
+Ravan : (keyboard noises)
+after 10 minutes later:
+ubuntu  >cat code_review.txt
+    Cahid : Salam Revan bugun hbnbbya gelessen?
+    Ravan : Beli indi yoldayam
+    after 3 hours later
+    Cahid : OOO menim peeerim
+    Ravan : Salam
+    Cahid : Gel baxaq koda
+    Ravan : Okey
+    Abil : Hara gedirsen? PLD taski var form da error aliriq
+    Cavid : Ravan burda dyan Yasar da gelsin portfolio baxaq
+    Cahid : Biz proyekte baxiriq indi qalsin soraya
+    Cavid : Sora baxarsizda biz tapanmiyacayq
+    after 2 hours later
+    Cahid : Bitirdik axir ki
+    Ravan : Code review qalib
+    Cahid : BRUHHHHH
+    Ravan : (keyboard noises)
+    after 10 minutes later:
+ubuntu >
