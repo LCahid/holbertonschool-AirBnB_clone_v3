@@ -8,6 +8,12 @@ app = Flask(__name__)
 app.register_blueprint(app_views)
 
 
+@app.errorhandler(404)
+def custom_not_found(error):
+    '''Doc for 404'''
+    return {"error": "Not found"}, 404
+
+
 @app.teardown_appcontext
 def final(self):
     '''Doc for teardown'''
