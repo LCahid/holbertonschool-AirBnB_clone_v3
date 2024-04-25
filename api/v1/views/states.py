@@ -32,8 +32,8 @@ def delete_state(state_id):
     storage.save()
     return jsonify({}), 200
 
-
 @app_views.route('/states', methods=['POST'])
+@app_views.route('/states/', methods=['POST'])
 def create_state():
     '''Doc for status'''
     state = request.get_json()
