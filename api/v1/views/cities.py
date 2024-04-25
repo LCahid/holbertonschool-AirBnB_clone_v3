@@ -4,12 +4,14 @@ from flask import request, jsonify
 from api.v1.views import app_views
 from models import storage
 from models.city import City
+from models.state import State
 
 
-@app_views.route('/states/<state_id>/cities', methods=['GET'], strict_slashes=False)
+@app_views.route('/states/<state_id>/cities', methods=['GET'],
+                strict_slashes=False)
 def get_cities_by_state_id(state_id):
     """Doc for get_cities_by_state_id"""
-    state = storage.get('State', state_id)
+    state = storage.get(State, state_id)
     if state is None:
         return {"error": "Not found"}, 404
     cities = [city.to_dict() for city in state.cities]
@@ -19,7 +21,7 @@ def get_cities_by_state_id(state_id):
 @app_views.route('/cities/<city_id>', methods=['GET'], strict_slashes=False)
 def get_city_by_id(city_id):
     """Doc for get_city_by_id"""
-    city = storage.get('City', city_id)
+    city = storage.get(City, city_id)
     if city is None:
         return {"error": "Not found"}, 404
     return jsonify(city.to_dict())
@@ -27,7 +29,7 @@ def get_city_by_id(city_id):
 
 @app_views.route('/cities/<city_id>', methods=['DELETE'], strict_slashes=False)
 def delete_city(city_id):
-    city = storage.get('City', city_id)
+    city = storage.get(City, city_id)
     if city is None:
         return {"error": "Not found"}, 404
     storage.delete(city)
@@ -35,9 +37,10 @@ def delete_city(city_id):
     return {}, 200
 
 
-@app_views.route('/states/<state_id>/cities', methods=['POST'], strict_slashes=False)
+@app_views.route('/states/<state_id>/cities', methods=['POST'],
+                 strict_slashes=False)
 def post_city(state_id):
-    state = storage.get('State', state_id)
+    state = storage.get(State, state_id)
     if state is None:
         return {"error": "Not found"}, 404
     data = request.get_json()
@@ -53,7 +56,7 @@ def post_city(state_id):
 
 @app_views.route('/cities/<city_id>', methods=['PUT'], strict_slashes=False)
 def put_city(city_id):
-    city = storage.get('City', city_id)
+    city = storage.get(City, city_id)
     if city is None:
         return {"error": "Not found"}, 404
     data = request.get_json()
