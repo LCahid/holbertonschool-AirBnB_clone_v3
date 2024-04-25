@@ -16,6 +16,7 @@ import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
+
 classes = {"Amenity": Amenity, "City": City,
            "Place": Place, "Review": Review, "State": State, "User": User}
 
@@ -79,7 +80,7 @@ class DBStorage:
         for obj in objs.values():
             if obj.id == id:
                 return obj
-            
+
     def count(self, cls=None):
         '''count the number of objects in storage'''
         return len(self.all(cls))
